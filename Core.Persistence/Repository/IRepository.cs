@@ -42,5 +42,5 @@ where TEntity : Entity<TEntityId>
     TEntity Update(TEntity entity);
     IList<TEntity> UpdateRange(IList<TEntity> entities);
     TEntity Delete(TEntity entity);
-    IList<TEntity> DeleteRange(IList<TEntity> entity);
+    IList<TEntity> DeleteRange(IList<TEntity> entities);
 }

@@ -17,7 +17,7 @@ public interface IAsyncRepository<TEntity, TEntityId>:IQuery<TEntity>
     );
 
     Task<Paginate<TEntity>> GetListAsync(
-        Expression<Func<TEntity, bool>> predicate = null,
+        Expression<Func<TEntity, bool>>? predicate = null,
         Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null,
         Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null,
         int index = 0,
@@ -29,7 +29,7 @@ public interface IAsyncRepository<TEntity, TEntityId>:IQuery<TEntity>
 
     Task<Paginate<TEntity>> GetListByDynamicAsync(
         DynamicQuery dynamicQuery,
-        Expression<Func<TEntity, bool>> predicate = null,
+        Expression<Func<TEntity, bool>>? predicate = null,
         Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null,
         Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null,
         int index = 0,
@@ -41,7 +41,7 @@ public interface IAsyncRepository<TEntity, TEntityId>:IQuery<TEntity>
         );
 
     Task<bool> AnyAsync(
-        Expression<Func<TEntity, bool>> predicate = null,
+        Expression<Func<TEntity, bool>>? predicate = null,
         bool withDeleted = false,
         bool enableTracking = true,
         CancellationToken cancellationToken = default
